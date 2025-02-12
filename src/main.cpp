@@ -1,10 +1,9 @@
-#include "snake_game.h"
+#include "heart_animation.h"
 
 void setup() {
-    setupGame();
+    setupHeart();
 }
 
 void loop() {
-    updateGame();
-    renderGame();
+    animateHeart();
 }
