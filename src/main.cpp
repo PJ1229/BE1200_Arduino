@@ -1,10 +1,14 @@
-#include "snake_game.h"
+#include <Arduino.h>
+
+const int ledPin = 6;  // Define pin 6 as the LED pin
 
 void setup() {
-    setupGame();
+  pinMode(ledPin, OUTPUT);  // Set pin 6 as an output
 }
 
 void loop() {
-    updateGame();
-    renderGame();
+  digitalWrite(ledPin, HIGH);  // Turn LED on
+  delay(1000);                 // Wait for 1 second
+  digitalWrite(ledPin, LOW);   // Turn LED off
+  delay(1000);                 // Wait for 1 second
 }
