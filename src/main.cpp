@@ -1,10 +1,12 @@
-#include "snake_game.h"
+#include <Arduino.h>
 
 void setup() {
-    setupGame();
+    pinMode(LED_BUILTIN, OUTPUT); // Set built-in LED as output
 }
 
 void loop() {
-    updateGame();
-    renderGame();
+    digitalWrite(LED_BUILTIN, HIGH); // Turn LED on
+    delay(2000);                      // Wait 2000 milliseconds
+    digitalWrite(LED_BUILTIN, LOW);  // Turn LED off
+    delay(750);                      // Wait 750 milliseconds
 }
