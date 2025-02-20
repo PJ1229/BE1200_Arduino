@@ -1,14 +1,22 @@
 #include <Arduino.h>
 
-const int ledPin = 6;  // Define pin 6 as the LED pin
+int   a = 5635;
+int   b;
+float c;
 
 void setup() {
-  pinMode(ledPin, OUTPUT);  // Set pin 6 as an output
+  //initialize serial communication
+  Serial.begin(9600);
+
 }
 
 void loop() {
-  digitalWrite(ledPin, HIGH);  // Turn LED on
-  delay(1000);                 // Wait for 1 second
-  digitalWrite(ledPin, LOW);   // Turn LED off
-  delay(1000);                 // Wait for 1 second
+  b = a/4;  
+  c = a/4;  
+
+  Serial.print("b = ");
+  Serial.println(b);
+  Serial.print("c = ");
+  Serial.println(c);
+  delay(5000);
 }
